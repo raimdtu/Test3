@@ -19,10 +19,8 @@ stages:
         runOnce:
           deploy:
             steps:
-              - download: P1
-                artifact: A1.1
-              - download: P1
-                artifact: A1.2
+              - script: echo Hello, world!
+                displayName: 'Run a one-line script'
      - deployment: deploymentJob5
        environment: envionment2
        pool: Default
@@ -30,8 +28,8 @@ stages:
         runOnce:
           deploy:
             steps:
-              - download: P2
-                artifact: A1.2
+              - script: echo Hello, world!
+                displayName: 'Run a one-line script'
               # - task: PublishBuildArtifacts@1
               #   inputs:
               #     PathtoPublish: 'artifact3'
