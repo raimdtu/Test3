@@ -12,8 +12,8 @@ trigger:
 stages:
  - stage: ProduceArtifact
    jobs:
-     - deployment: deploymentJob4
-       environment: envionment2
+     - deployment: deploymentJob6
+       environment: envionment1
        pool: Default
        strategy:
         runOnce:
@@ -23,8 +23,8 @@ stages:
                 artifact: A1.1
               - download: P1
                 artifact: A1.2
-     - deployment: deploymentJob5
-       environment: envionment2
+     - deployment: deploymentJob7
+       environment: envionment6
        pool: Default
        strategy:
         runOnce:
